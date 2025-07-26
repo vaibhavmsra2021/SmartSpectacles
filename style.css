@@ -1,0 +1,153 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Header Section */
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+    animation: slideDown 1s ease-out;
+}
+
+/* Status Section */
+#status {
+    font-size: 1.2em;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 400;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Wear Time Display */
+#wearTime {
+    font-size: 2.5em;
+    margin: 20px 0;
+    font-weight: 600;
+    color: #ffdd57;
+    text-align: center;
+    text-shadow: 1px 1px 10px rgba(255,221,87,0.8);
+    animation: pulse 2s infinite;
+}
+
+/* Button Container */
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+/* Buttons */
+button {
+    padding: 12px 30px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+#connectBtn {
+    background: #4caf50;
+}
+
+#connectBtn:hover {
+    background: #388e3c;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(72, 239, 72, 0.4);
+}
+
+#disconnectBtn {
+    background: #e53935;
+}
+
+#disconnectBtn:hover {
+    background: #b71c1c;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(229, 57, 53, 0.4);
+}
+
+/* Disable Button Styling */
+button:disabled {
+    background: #777;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #ccc;
+    text-align: center;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    #wearTime {
+        font-size: 1.8em;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
